@@ -1,0 +1,51 @@
+.drag-image {
+  background: url("../img/icon-grip.png") no-repeat center;
+  height: 13px;
+  width: 13px;
+  background-color: #FFF;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  margin: 0 10px;
+}
+
+.home-image {
+  background: url("../img/icon-home.png") no-repeat center;
+  height: 8px;
+  width: 10px;
+  background-color: #29B259;
+  background-position: center;
+  display: block;
+  padding: 7.5px 4.5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.delete-image {
+  background: url("../img/icon-delete.png") no-repeat center;
+  height: 14px;
+  width: 13px;
+  background-color: #FFF;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.dashboard-image {
+  background: url("../img/Dashboard@2x.png") no-repeat center;
+  height: 13px;
+  width: 13px;
+  background-color: #FFF;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  margin: 0 10px;
+}
+/*# sourceMappingURL=images.css.map */

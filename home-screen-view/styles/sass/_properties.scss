@@ -1,0 +1,195 @@
+.properties-section {
+    width: 220px;
+    border-left: 1px solid #d6d6d6;
+    background-color: #EEEEEE;
+}
+
+.colorize-settings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+
+    &>span {
+        font-size: 14px;
+        color: #707070;
+        margin-right: 10px;
+    }
+
+    &>.colorize-button {
+        width: 38px;
+        height: 18px;
+        border-radius: 11px;
+        background-color: #707070;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &>.state {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 2px;
+        }
+    }
+}
+
+.images-container {
+    margin-top: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
+
+    &>.image {
+        width: 54px;
+        height: 54px;
+        background-color: white;
+        box-sizing: border-box;
+        border: .5px solid #EEEEEE;
+
+    }
+}
+
+.images-label {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    top: -20px;
+    left: 0;
+}
+
+.entity-properties {
+    margin-top: 8px;
+    width: 100%;
+    height: 120px;
+    display: grid;
+    grid-template-columns: 3fr 4fr 5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "properties-name properties-value properties-extra"
+}
+
+.properties-name {
+    grid-area: properties-name;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+
+    &>.property-name {
+        font-size: 13px;
+        font-weight: 400;
+        height: 22px;
+        display: block;
+    }
+}
+
+.properties-value {
+    grid-area: properties-value;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0 9px 0;
+}
+
+.properties-extra {
+    grid-area: properties-extra;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0 9px 0;
+    position: relative;
+}
+
+.bold-button {
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    border: 1px solid #CBCBCB;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000000af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-sizing: border-box;
+    margin-top: 2px;
+    position: absolute;
+    left: 0;
+
+    &.disabled {
+        background-color: #EEEEEE;
+        color: #CBCBCB;
+    }
+}
+
+.input-label {
+    font-size: 13px;
+    display: inline-block;
+    margin-right: 6px;
+    color: #707070;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 1px;
+}
+
+.properties-link {
+    text-decoration: underline;
+    font-size: 13px;
+    color: #0063CE;
+    cursor: pointer;
+}
+
+.number-input {
+    border: none;
+    outline-width: 0;
+    width: 49px;
+    height: 22px;
+    padding: 4px;
+    border-radius: 3px;
+    border: 1px solid #CBCBCB;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+    color: #000000af;
+
+    &.disabled {
+        background-color: #EEEEEE;
+        color: #CBCBCB;
+    }
+}
+
+.custom-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    // margin-top: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}

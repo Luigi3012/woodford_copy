@@ -1,0 +1,636 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="styles/css/global.css">
+       <link rel="stylesheet" href="styles/css/colorpicker.css">
+       <link rel="stylesheet" href="styles/css/dragula.css">
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <!-- <div id="save-theme-button" class="upper-menu">Save</div> -->
+        <div id="main-container">
+            <div id="screens-container">
+                <div class="phone-screen">
+                    <div class="header-menu" data-bind="style:{ 'background-color':  reference_color_title_background }">
+                        <img src="./src/status_bar.png" class="status-bar">
+        
+                        <div class="header-menu-buttons-container">
+                            <i class="material-icons arrow-back" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                cast_connected
+                            </i>
+                            <h1 data-bind="style:{ 'color' :  reference_color_title_foreground }">Resco Mobile CRM</h1>
+                            <i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                sync
+                            </i>
+                        </div>
+                    </div>
+                    <ul class="main-view-list" data-bind="style:{ 'background-color' :  reference_color_home_list_background }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">dashboard</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Dashboard</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">map</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Map</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">local_activity</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Activities</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">calendar_today</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Calendar</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">account_box</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Accounts</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li class="selected" data-bind="style:{ 'background-color' :  reference_color_home_list_selected_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">contacts</i><span data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">Contacts</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">phone_in_talk</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Leads</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">list_alt</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Opportunitites</span></li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                    </ul>   
+                    <div class="bottom-menu" data-bind="style:{ 'background-color' :  reference_color_tab_background }">
+                        <span class="sync-notation" data-bind="style:{ 'color' :  reference_color_tab_foreground }">Synced Tuesday, 25. 09. 2018</span>
+                    </div>
+                </div>
+                <div class="phone-screen">
+                    <div class="header-menu" data-bind="style:{ 'background-color' :  reference_color_title_background }">
+                        <img src="./src/status_bar.png" class="status-bar">
+        
+                        <div class="header-menu-buttons-container">
+                            <i class="material-icons arrow-back" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                arrow_back_ios
+                            </i>
+                            <h1 class="centered" data-bind="style:{ 'color' :  reference_color_title_foreground }">Accounts</h1>
+                        </div>
+                    </div>
+                    <div class="sort-by-menu" data-bind="style:{ 'background-color' :  reference_color_list_header_background }">
+                        <div class="main-info-container">
+                            <span class="name" data-bind="style:{ 'color' :  reference_color_list_header_foreground }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_list_header_foreground }">arrow_drop_up</i>Name</span>
+                            <span class="street" data-bind="style:{ 'color' :  reference_color_list_header_foreground }">Address</span>
+                        </div>
+                        <span class="status" data-bind="style:{ 'color' :  reference_color_list_header_foreground }">Status</span>
+                    </div>
+                    <ul class="main-view-list">
+                        <li class="toolbar-menu" data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <div class="toolbar" data-bind="style:{ 'background-color' :  reference_color_search_background, 'color' :  reference_color_search_foreground }">
+                                <div class="toolbar-item" data-bind="style:{ 'color' :  reference_color_search_foreground }"><i class="material-icons">search</i>Search</div>
+                                <div class="toolbar-item" data-bind="style:{ 'color' :  reference_color_search_foreground }"><i class="material-icons">bolt</i>Filter</div>
+                                <div class="toolbar-item selected"data-bind="style:{ 'color' :  reference_color_search_selected_foreground }"><i class="material-icons">arrow_upward</i>Name</div>
+                            </div>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li class="swiped" data-bind="style:{ 'background-color' :  reference_color_list_selected_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">Conan Skyscraper</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">Open</span>
+                            <div class="call-button" data-bind="style:{ 'background' :  reference_color_title_background }"><span data-bind="style:{ 'color' :  reference_color_title_foreground }">Call</span></div>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                            <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">location_city</i>
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                        </li>
+                        <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                    </ul>
+                </div>
+                <div class="phone-screen" data-bind="style:{ 'background-color' :  reference_color_form_background }">
+                    <div class="header-menu" data-bind="style:{ 'background-color' :  reference_color_title_background }">
+                        <img src="./src/status_bar.png" class="status-bar">
+        
+                        <div class="header-menu-buttons-container">
+                            <i class="material-icons arrow-back" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                arrow_back_ios
+                            </i>
+                            <h1 data-bind="style:{ 'color' :  reference_color_title_foreground }">Conan Skyscraper</h1>
+                            <i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                save
+                            </i>
+                            <i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                menu
+                            </i>
+                        </div>
+                    </div>
+                    <form class="screen-3-form">
+                        <h2 data-bind="style:{ 'color' :  reference_color_tab_foreground }">Info</h2>
+                        <section>
+                            <label data-bind="style:{ 'border-color' :  reference_color_form_item_separator }">
+                                <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                <p data-bind="style:{ 'color' :  reference_color_form_item_foreground }">Conan Skycraper</p>
+                                <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Account Name</a>
+                            </label>
+                            <label>
+                                <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                <p>conan@conan.com</p>
+                                <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Email</a>
+                                <i class="material-icons" data-bind="style:{ 'color' :  reference_color_form_item_button }">
+                                    mail_outline
+                                </i>
+                            </label>
+                        </section>
+                        <section>
+                            <label data-bind="style:{ 'border-color' :  reference_color_form_item_separator }">
+                                <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                <p data-bind="style:{ 'color' :  reference_color_form_item_foreground }">735-8546</p>
+                                <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Main Phone</a>
+                                <i class="material-icons" data-bind="style:{ 'color' :  reference_color_form_item_button }">
+                                    phone
+                                </i>
+                            </label>
+                            <label>
+                                <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Fax</a>
+                            </label>
+                        </section>
+                        <section>
+                            <label>
+                                <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                <p data-bind="style:{ 'color' :  reference_color_form_item_disabled }">http://conanskyscraper.com</p>
+                                <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Disabled</a>
+                            </label>
+                        </section>
+                        <section>
+                            <label>
+                                <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                <p class="clickable" data-bind="style:{ 'color' :  reference_color_form_item_link }">US Dolar</p>
+                                <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Currency</a>
+                            </label>
+                        </section>
+                    </form>
+                    <div class="bottom-menu" data-bind="style:{ 'background-color' :  reference_color_tab_background }">
+                        <i class="material-icons selected" data-bind="style:{ 'color' :  reference_color_tab_selected_foreground }">
+                            info
+                        </i>
+                        <i class="material-icons" data-bind="style:{ 'color' :  reference_color_tab_foreground }">
+                            map
+                        </i>
+                        <i class="material-icons" data-bind="style:{ 'color' :  reference_color_tab_foreground }">
+                            location_on
+                        </i>
+                    </div>
+                </div>
+                <div class="tablet-screen hidden" style="opacity: 0">
+                    <div class="status-bar-left"></div>
+                    <div class="status-bar-right"></div>
+                    <div class="phone-screen first">
+                        <div class="tablet-view-border"></div>
+                        <div class="header-menu" data-bind="style:{ 'background-color':  reference_color_title_background }">
+            
+                            <div class="header-menu-buttons-container">
+                                <i class="material-icons arrow-back" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                    cast_connected
+                                </i>
+                                <h1 data-bind="style:{ 'color' :  reference_color_title_foreground }">Resco Mobile CRM</h1>
+                                <i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                    sync
+                                </i>
+                            </div>
+                        </div>
+                        <ul class="main-view-list" data-bind="style:{ 'background-color' :  reference_color_home_list_background }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">dashboard</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Dashboard</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">map</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Map</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">local_activity</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Activities</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">calendar_today</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Calendar</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">account_box</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Accounts</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li class="selected" data-bind="style:{ 'background-color' :  reference_color_home_list_selected_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">contacts</i><span data-bind="style:{ 'color' :  reference_color_home_list_selected_foreground }">Contacts</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">phone_in_talk</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Leads</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_home_list_background }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_background }">list_alt</i><span data-bind="style:{ 'color' :  reference_color_home_list_foreground }">Opportunitites</span></li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_home_list_separator }">
+                        </ul>   
+                        <div class="bottom-menu" data-bind="style:{ 'background-color' :  reference_color_tab_background }">
+                            <span class="sync-notation" data-bind="style:{ 'color' :  reference_color_tab_foreground }">Synced Tuesday, 25. 09. 2018</span>
+                        </div>
+                    </div>
+                    <div class="phone-screen">
+                        <div class="tablet-view-border"></div>
+                        <div class="header-menu" data-bind="style:{ 'background-color' :  reference_color_title_background }">
+            
+                            <div class="header-menu-buttons-container">
+                                <i class="material-icons arrow-back" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                    arrow_back_ios
+                                </i>
+                                <h1 class="centered" data-bind="style:{ 'color' :  reference_color_title_foreground }">Accounts</h1>
+                            </div>
+                        </div>
+                        <div class="sort-by-menu" data-bind="style:{ 'background-color' :  reference_color_list_header_background }">
+                            <div class="main-info-container">
+                                <span class="name" data-bind="style:{ 'color' :  reference_color_list_header_foreground }"><i class="material-icons" data-bind="style:{ 'color' :  reference_color_list_header_foreground }">arrow_drop_up</i>Name</span>
+                                <span class="street" data-bind="style:{ 'color' :  reference_color_list_header_foreground }">Address</span>
+                            </div>
+                            <span class="status" data-bind="style:{ 'color' :  reference_color_list_header_foreground }">Status</span>
+                        </div>
+                        <ul class="main-view-list">
+                            <li class="toolbar-menu" data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <div class="toolbar" data-bind="style:{ 'background-color' :  reference_color_search_background, 'color' :  reference_color_search_foreground }">
+                                    <div class="toolbar-item" data-bind="style:{ 'color' :  reference_color_search_foreground }"><i class="material-icons">search</i>Search</div>
+                                    <div class="toolbar-item" data-bind="style:{ 'color' :  reference_color_search_foreground }"><i class="material-icons">bolt</i>Filter</div>
+                                    <div class="toolbar-item selected"data-bind="style:{ 'color' :  reference_color_search_selected_foreground }"><i class="material-icons">arrow_upward</i>Name</div>
+                                </div>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li class="swiped" data-bind="style:{ 'background-color' :  reference_color_list_selected_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">Conan Skyscraper</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_selected_foreground }">Open</span>
+                                <div class="call-button" data-bind="style:{ 'background' :  reference_color_title_background }"><span data-bind="style:{ 'color' :  reference_color_title_foreground }">Call</span></div>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                            <li data-bind="style:{ 'background-color' :  reference_color_list_background }">
+                                <i class="material-icons screen-2" data-bind="style:{ 'color' :  reference_color_title_background }">location_city</i>
+                                <div class="main-info-container">
+                                    <span class="name" data-bind="style:{ 'color' :  reference_color_list_foreground }">Apollo Apartment Building</span>
+                                    <span class="street" data-bind="style:{ 'color' :  reference_color_list_foreground }">1635 Snyder Avenue</span>
+                                </div>
+                                <span class="status" data-bind="style:{ 'color' :  reference_color_list_foreground }">Open</span>
+                            </li>
+                            <hr data-bind="style:{ 'background-color' :  reference_color_list_separator }">
+                        </ul>
+                    </div>
+                    <div class="phone-screen" data-bind="style:{ 'background-color' :  reference_color_form_background }">
+                        <div class="header-menu" data-bind="style:{ 'background-color' :  reference_color_title_background }">
+            
+                            <div class="header-menu-buttons-container">
+                                <i class="material-icons arrow-back" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                    arrow_back_ios
+                                </i>
+                                <h1 data-bind="style:{ 'color' :  reference_color_title_foreground }">Conan Skyscraper</h1>
+                                <i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                    save
+                                </i>
+                                <i class="material-icons" data-bind="style:{ 'color' :  reference_color_title_foreground }">
+                                    menu
+                                </i>
+                            </div>
+                        </div>
+                        <form class="screen-3-form">
+                            <h2 data-bind="style:{ 'color' :  reference_color_tab_foreground }">Info</h2>
+                            <section>
+                                <label data-bind="style:{ 'border-color' :  reference_color_form_item_separator }">
+                                    <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                    <p data-bind="style:{ 'color' :  reference_color_form_item_foreground }">Conan Skycraper</p>
+                                    <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Account Name</a>
+                                </label>
+                                <label>
+                                    <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                    <p>conan@conan.com</p>
+                                    <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Email</a>
+                                    <i class="material-icons" data-bind="style:{ 'color' :  reference_color_form_item_button }">
+                                        mail_outline
+                                    </i>
+                                </label>
+                            </section>
+                            <section>
+                                <label data-bind="style:{ 'border-color' :  reference_color_form_item_separator }">
+                                    <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                    <p data-bind="style:{ 'color' :  reference_color_form_item_foreground }">735-8546</p>
+                                    <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Main Phone</a>
+                                    <i class="material-icons" data-bind="style:{ 'color' :  reference_color_form_item_button }">
+                                        phone
+                                    </i>
+                                </label>
+                                <label>
+                                    <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                    <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Fax</a>
+                                </label>
+                            </section>
+                            <section>
+                                <label>
+                                    <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                    <p data-bind="style:{ 'color' :  reference_color_form_item_disabled }">http://conanskyscraper.com</p>
+                                    <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Disabled</a>
+                                </label>
+                            </section>
+                            <section>
+                                <label>
+                                    <input type="text" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" readonly>
+                                    <p class="clickable" data-bind="style:{ 'color' :  reference_color_form_item_link }">US Dolar</p>
+                                    <a data-bind="style:{ 'color' :  reference_color_form_item_label_foreground }">Currency</a>
+                                </label>
+                            </section>
+                        </form>
+                        <div class="bottom-menu" data-bind="style:{ 'background-color' :  reference_color_tab_background }">
+                            <i class="material-icons selected" data-bind="style:{ 'color' :  reference_color_tab_selected_foreground }">
+                                info
+                            </i>
+                            <i class="material-icons" data-bind="style:{ 'color' :  reference_color_tab_foreground }">
+                                map
+                            </i>
+                            <i class="material-icons" data-bind="style:{ 'color' :  reference_color_tab_foreground }">
+                                location_on
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-bar">
+                    <div class="tab-bar-item active">Phone</div>
+                    <div class="tab-bar-item">Tablet</div>
+                </div>
+            </div>
+        </div>
+        <div id="colors-side-menu">
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">Title</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="title_background" style="background-color: #4598ff" data-bind="style:{ 'background-color' :  reference_color_title_background }"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="title_foreground" style="background-color: #fdfdfd" data-bind="style:{ 'background-color' :  reference_color_title_foreground }"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="title_background" style="background-color: #4598ff" data-bind="style:{ 'background-color' :  reference_color_title_background }"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="title_foreground" style="background-color: #fdfdfd" data-bind="style:{ 'background-color' :  reference_color_title_foreground }"></span></div>Foreground</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">Home List</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="home_list_background" data-bind="style:{ 'background-color' :  reference_color_home_list_background }" style="background-color: #f0f0f0"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="home_list_selected_background" data-bind="style:{ 'background-color' :  reference_color_home_list_selected_background }" style="background-color: #d9ecff"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="home_list_foreground" data-bind="style:{ 'background-color' :  reference_color_home_list_foreground }" style="background-color: #707070"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="home_list_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_home_list_selected_foreground }" style="background-color: #0066cc"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="home_list_separator" data-bind="style:{ 'background-color' :  reference_color_home_list_separator }" style="background-color: #d3d3d3"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="home_list_background" data-bind="style:{ 'background-color' :  reference_color_home_list_background }" style="background-color: #f0f0f0"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="home_list_selected_background" data-bind="style:{ 'background-color' :  reference_color_home_list_selected_background }" style="background-color: #d9ecff"></span></div>Selected Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="home_list_foreground" data-bind="style:{ 'background-color' :  reference_color_home_list_foreground }" style="background-color: #707070"></span></div>Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="home_list_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_home_list_selected_foreground }" style="background-color: #0066cc"></span></div>Selected Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="home_list_separator" data-bind="style:{ 'background-color' :  reference_color_home_list_separator }" style="background-color: #d3d3d3"></span></div>Separator</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">Search</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="search_background" data-bind="style:{ 'background-color' :  reference_color_search_background }" style="background-color: #ffffff"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="search_foreground" data-bind="style:{ 'background-color' :  reference_color_search_foreground }" style="background-color: #b4b4b4"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="search_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_search_selected_foreground }" style="background-color: #0066cc"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="search_background" data-bind="style:{ 'background-color' :  reference_color_search_background }" style="background-color: #ffffff"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="search_foreground" data-bind="style:{ 'background-color' :  reference_color_search_foreground }" style="background-color: #b4b4b4"></span></div>Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="search_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_search_selected_foreground }"style="background-color: #0066cc"></span></div>Selected Foreground</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">List Header</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="list_header_background" data-bind="style:{ 'background-color' :  reference_color_list_header_background }" style="background-color: #0066cc"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="list_header_foreground" data-bind="style:{ 'background-color' :  reference_color_list_header_foreground }" style="background-color: #ffffff"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_header_background" data-bind="style:{ 'background-color' :  reference_color_list_header_background }" style="background-color: #0066cc"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_header_foreground" data-bind="style:{ 'background-color' :  reference_color_list_header_foreground }" style="background-color: #ffffff"></span></div>Foreground</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">List</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="list_background" data-bind="style:{ 'background-color' :  reference_color_list_background }" style="background-color: #f0f0f0"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="list_selected_background" data-bind="style:{ 'background-color' :  reference_color_list_selected_background }" style="background-color: #d9ecff"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="list_foreground" data-bind="style:{ 'background-color' :  reference_color_list_foreground }" style="background-color: #707070"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="list_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_list_selected_foreground }" style="background-color: #0066cc"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="list_separator" data-bind="style:{ 'background-color' :  reference_color_list_separator }" style="background-color: #d3d3d3"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_background" data-bind="style:{ 'background-color' :  reference_color_list_background }" style="background-color: #f0f0f0"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_selected_background" data-bind="style:{ 'background-color' :  reference_color_list_selected_background }" style="background-color: #d9ecff"></span></div>Selected Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_foreground" data-bind="style:{ 'background-color' :  reference_color_list_foreground }" style="background-color: #707070"></span></div>Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_list_selected_foreground }" style="background-color: #0066cc"></span></div>Selected Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="list_separator" data-bind="style:{ 'background-color' :  reference_color_list_separator }" style="background-color: #d3d3d3"></span></div>Separator</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">Form</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="form_background" data-bind="style:{ 'background-color' :  reference_color_form_background }" style="background-color: #f0f0f0"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_background" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" style="background-color: #ffffff"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_foreground" data-bind="style:{ 'background-color' :  reference_color_form_item_foreground }" style="background-color: #88888b"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_label_foreground" data-bind="style:{ 'background-color' :  reference_color_form_item_label_foreground }" style="background-color: #0066cc"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_disabled" data-bind="style:{ 'background-color' :  reference_color_form_item_disabled }" style="background-color: #e4e4e4"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_link" data-bind="style:{ 'background-color' :  reference_color_form_item_link }" style="background-color: #4598ff"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_separator" data-bind="style:{ 'background-color' :  reference_color_form_item_separator }" style="background-color: #dedede"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="form_item_button" data-bind="style:{ 'background-color' :  reference_color_form_item_button }" style="background-color: #0066cc"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_background" data-bind="style:{ 'background-color' :  reference_color_form_background }" style="background-color: #f0f0f0"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_background" data-bind="style:{ 'background-color' :  reference_color_form_item_background }" style="background-color: #ffffff"></span></div>Item Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_foreground" data-bind="style:{ 'background-color' :  reference_color_form_item_foreground }" style="background-color: #88888b"></span></div>Item Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_label_foreground" data-bind="style:{ 'background-color' :  reference_color_form_item_label_foreground }" style="background-color: #0066cc"></span></div>Item Label Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_disabled" data-bind="style:{ 'background-color' :  reference_color_form_item_disabled }" style="background-color: #e4e4e4"></span></div>Item Disabled</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_link" data-bind="style:{ 'background-color' :  reference_color_form_item_link }" style="background-color: #4598ff"></span></div>Item Link</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_separator" data-bind="style:{ 'background-color' :  reference_color_form_item_separator }" style="background-color: #dedede"></span></div>Item Separator</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="form_item_button" data-bind="style:{ 'background-color' :  reference_color_form_item_button }" style="background-color: #0066cc"></span></div>Item Button</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">Grid</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="grid_background" data-bind="style:{ 'background-color' :  reference_color_grid_background }" style="background-color: #ffffff"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="grid_border" data-bind="style:{ 'background-color' :  reference_color_grid_border }" style="background-color: #ffffff"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="grid_background" data-bind="style:{ 'background-color' :  reference_color_grid_background }" style="background-color: #ffffff"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container"reference="grid_border" data-bind="style:{ 'background-color' :  reference_color_grid_border }" style="background-color: #ffffff"></span></div>Border</li>
+                    </ul>
+                </main>
+            </section>
+            <section class="colors-menu-section">
+                <header>
+                    <h1 class="section-header">Tab</h1>
+                    <i class="fas fa-ellipsis-h collapse-icon"></i>
+                </header>
+                <main>
+                    <nav class="collapsed-colors-container">
+                        <div class="transparent-background-container"><span class="color-container" reference="tab_background" data-bind="style:{ 'background-color' :  reference_color_tab_background }" style="background-color: #dedede"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="tab_foreground" data-bind="style:{ 'background-color' :  reference_color_tab_foreground }" style="background-color: #c8c7cc"></span></div>
+                        <div class="transparent-background-container"><span class="color-container" reference="tab_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_tab_selected_foreground }" style="background-color: #707070"></span></div>
+                    </nav>
+                    <ul class="uncollapsed-colors-list animation-back hidden">
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="tab_background" data-bind="style:{ 'background-color' :  reference_color_tab_background }" style="background-color: #dedede"></span></div>Background</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="tab_foreground" data-bind="style:{ 'background-color' :  reference_color_tab_foreground }" style="background-color: #c8c7cc"></span></div>Foreground</li>
+                        <li class="uncollapsed-list-item"><div class="transparent-background-container"><span class="color-container" reference="tab_selected_foreground" data-bind="style:{ 'background-color' :  reference_color_tab_selected_foreground }" style="background-color: #707070"></span></div>Selected Foreground</li>
+                    </ul>
+                </main>
+            </section>
+        </div>
+
+        <!-- scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="module" src='scripts/dragula.js'></script>
+        <script src="scripts/knockout.js"></script>
+        <script src="scripts/collapse_color_menu.js"></script>
+        <script src="scripts/colorpicker_api.js"></script>
+        <script src="https://kit.fontawesome.com/20816d6b46.js"></script>
+        <script src="scripts/color_manager.js"></script>
+        <script src='scripts/click-screen.js'></script>
+        <script src="scripts/screen-change.js"></script>
+        <script src='scripts/save.js'></script>
+    </body>
+</html>

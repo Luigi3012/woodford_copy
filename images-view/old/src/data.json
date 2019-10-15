@@ -1,0 +1,62 @@
+[
+    {
+        "entry-type": "folder",
+        "entry-name": "Images.MonoTouch",
+        "children": [
+            {
+                "entry-type": "folder",
+                "entry-name": "Activity",
+                "children": [
+                    {
+                        "entry-type": "file",
+                        "file-type": "PNG Image",
+                        "base-64-data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAWFMRmEAu0Pl8QAAAY9JREFUaIHtmk9KxDAUh78npmu3rjyCoLgevYF38QCeQFzPZezMekDcewCX6rowcZOB0iZOadNOX5oPQimvyXs/Xv6WiMUKCXN26gDGJgvUTm+BgpSCvMUMZgw/0neSEWQPYLGj9oKhfnIXVY/FSrMAj0AJfANWQSmBe6+WgLhTB9y3tES2JhlBSmAFbIG1wXz6Ml9R7QAM5s5nj8UxPxXVJfCEi9liH+p23xhcuedLSNycMJgvYO1er5v24CTjKqqgloiLpu18QLvvA+pO5sc3Bvcw/tiKzWGsNjcEya+DWaB2gmNQK4sbg8FlIvYxSJAb16532j9m79C+t+cln8EsUDtZoHayQO1kgdoJ7mQKitvIvnYAwv//mQuKqOfQ5DMYPE2MsBftdErp6zcUd/IZzAK1kwVqZ8p1sBOx/SafwSnXwUn+yeR1MDWyQO1kgdpZrkBBrqYMZAiCHC4f/DZtPoFb93ytVZwtLhHP7vWj9UHqF4FaAmsiN8DPDILuUjY+cd6bTqmx3Fk0FZIX+AeholioRoSDpwAAAABJRU5ErkJgggAA",
+                        "entry-name": "Appointment.png"
+                    },
+                    {
+                        "entry-type": "file",
+                        "file-type": "PNG Image",
+                        "base-64-data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAWFMRmEAu0Pl8QAAAvpJREFUaIHtmT1MFEEYhp81TodKK4VaSWOERBIqAhR2GCmNMYaYkGCH/LQotQSxMRAbTYDO5EATOxNKYwhiLNQGbbAFtZvEz2K+y513u3uwN8sxZN9kkpvZuZn3mZlvduYuEiTiBOtUqw3krQIwdBWAoasADF0FYPASJKpOwDCwBUhgaQcYruOJAdw5Bmazpq1anqj2LBoR/dWPgwbzJ2bSj6Us9gOAIP+FXVoMLlrs5VxdeZDFtlnsTNLztBkE+A1MG8xmXgabkcW2AYtAZ7nsMDP4DjiDm8lbuThsQrq61nFwu0n10gCvA0/186TFzuiItVwWOwSs4CbgPXAlqW7iEi1PdUR0B3gGtAFfgbFWbj4abzc0uyTIfaj3XVZDQC3rBV4BHbi4HDOYb3lBxElXzxxwTT1MCfI8zTccEFDL24G3QK8WzRrMG88csdJ4e0xlgPsF+VjjrznAquerQHnTWTWYJz4gkqTxNoGLt89AnyD7Mb78AGqdUWBJs5vAVB5xabEPgNuaXRbkboonf4BarxvYwI3sLu596SUuNd4eAgNadE+QFw38xPrOfJvQGLiAWzYduPdlf9b2ytJ4W8TB/QIGG8GlqanrksZCH7CMm8k5ix3N2p4OUPlk8gnoEmSjGY+Zl2hdQ0TjwLxmXwPzh4lLPS1NavYlMB63maT07zcGEzq5qebO4g4F0wbzM+07Gm8TVF7es4LMZug7f0D9fhcO8ioNDusWex73fusE9oERQdYy9ut3k0mSINtAP7BG5bA+VFtPN5MVHNw2MJAVrpGh2hu9AFJbniUBC1Ru2+sG02MwPcCjqvIS0O6hr1jfuQJqeyPAnrb7BXfFKcMteOynNYDaZjfwvQpsDxdvPvuI9e19k0lSRHROl+Ml3K9f257bP5pdtFU6sl30uKkADF0FYOgqAEPX6aQHEVHi7/1BKebIU6L1f4NlTaWDHNUu4v4EbfczhEemPRzgj+rCOsCTphO/yRSAoasADF0FYOgqAENXARi6/gHyNu9hubX8ZAAAAABJRU5ErkJgggAA",
+                        "entry-name": "Email.png"
+                    },
+                    {
+                        "entry-type": "file",
+                        "file-type": "PNG Image",
+                        "base-64-data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAWFMRmEAu0Pl8QAAA8VJREFUaIHtmj1sEzEUx39G8lYEKyyFBUYKZSbpXkTZoAyFAcQERd1J25mPsgEdoFIRW4GWGZIZhY+NMpGpGzSCzRJmeL7meiQX38VHmip/ybIc++z3v+d7z+85ymIV+xgH+i1A0RgSHHQMCQ46hgQHHV4EFWpUodYU6odC/fEo7xTqVtHCe8FiVVoBjgE/AZujLHWbv+gSkegIhXoFXAA+AnMa/bvbSzOYceAeMAKcttgveV5+CPhs0ZKrvcgBaHQd2HDNqTyChYIPwcMAvuRiyDq+EAytKNAEMJiRgmUpBD4EP7v6ZJGCFIUsW3TfarDq6n2rwW1XHylSkKKQRYNnihSkKHQl6E4hTeCowQycFn2NTKTF8Qxzn3P19wzPBEdwggYzYjCriFFqAK9zyhYEvgQjISfTHL7BnADWaZGbsthmbyL2Bi+CFtsA3rhmud0Yg5kEXgAHgRow1s8oIkIWR7+jxWSHwVwGKq65YrET/dZchKwEm8C4i/fiqLt6G5gPIVgoeBN0GllyzevxPo3+BrxEQqtnwaQLgKzh0hKdtfgU2ALKCnU7hHAhkIlgQot3430uIL7vmg8V6lTv4vWOzAGvxS4gLuCowdyI92l0DVh2zfd7gWTXpFPbh1Al4D3wC7jpvsEdGEwFsbbfkaRTqkVVqEPADDCGZPHSUAVqFlvzEjZvOg54jqQGvwJljT4bL8Cm6/+J+MRO84yRLy35LEjasBPcW68Cp4ANjV6M97sTzxPgBOI+JpKO383xCdFaZIm3uixdAs4jAfgdi32UKmcvN7zuG6sCh4BljX6aHBPbrgDzFrsYe34NSSt+0+grvusaTAnJu9YsdiJVxl6vsBVqhpbvW9Dot20EukHLd1aBa8BV5PTzG5jW6G6aS875AcBiUw1lzwTBm2QJmEMyA9u4fCtipOrJ8d3gSzBIXtRiVxCtAFQM5npyjHMh04gbicgt5yGXBUE0uDPZbk1uAA/aZcRdWDWp0Q/yrvVft+iuCYXkEmJ4NoHFpJ8Mgf+6ReNw27UMfEEC38cGcyn0Or4o5G7C+bsysIIEwHMGs9rmgF44gm/RfxaQY91zYNT9VCeAcenbN9hxIVQFmEW+TRCiG0Atx9Xc3iMIO0ezWXYT/YU4/zqeZF1+dh1oWOzx1DX78Wc8R3QKIZoMqTaRc+kWrVTIVnTSceQqSArzjcVeTF2r3/82VKhRhOwUretyHzSRKKWROn+/CSbhjNIYctqJUpTHaBmpBnJnOduNHOxBgqExvKMfdAwJDjqGBAcd+57gX6vG5G7lXi/9AAAAAElFTkSuQmCC",
+                        "entry-name": "Phonecall.png"
+                    }
+                ]
+            },
+            {
+                "entry-type": "folder",
+                "entry-name": "Buttons",
+                "children": [
+                    {
+                        "entry-type": "file",
+                        "file-type": "PNG Image",
+                        "base-64-data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAWFMRmEAu0Pl8QAAAbxJREFUaIHtmjFOwzAUhr+HyAwrE0cABubCDXoCOAQH4ASoMPYSiBOQdkZCMCMhMTFC5kgxiytFiS2qJHZi159kRanrvvfr+T3blUWhhIjZG9sB1ySBodNZoCC5IM9DOuPCjnQtMoJUAArldBb0tZOmaPAolDQbMAdy4AdQAbQcuDBqsYgb2+GurSWyVWQEyYEZsAaWGdmHKfIl5QtARnZu6h+K/+yUlEfADdpnhbqs95tycKafdzZxUyIj+waW+vWk2W8tMnpgENQCcdjs2+/xu689xnqzY8rBCtzn1tBscrW5IYh+HUwCQ8eag6GyczloXSZcH4OGxjbzghLRhSQwdJLA0HEuUJCq3vRnB4JcCfIoyKfLtbfPaaITglwDCwxHGyf2bDuZodbBbaPT157N75SDDimAB+DM5a7Jew5q3oG5Qn25NjRGDhbA6dDippSD9z4it2EMgU8+jXmfoq4KypSmqFeSwNBJAkMneoHOt2pj/zsXfQSTwNBJAkPHKlCQY5+O9EGQzeWDotlnErjWz0Vt4GTRgbjVr2+tL8R+EaglsCZyBfxOwOlt2sokznjTKTZ2t4rGQvQC/wC0B3CwMs/88QAAAABJRU5ErkJgggAA",
+                        "entry-name": "Resco_appointment.png"
+                    }
+                ]
+            },
+            {
+                "entry-type": "folder",
+                "entry-name": "CallDirection",
+                "children": [
+                    {
+                        "entry-type": "file",
+                        "file-type": "PNG Image",
+                        "base-64-data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAWFMRmEAu0Pl8QAAAk5JREFUaIHtmb9uFDEQh7+JKJFCS0U6ygCiDw8Ayr0BqfIaySPkDcgjIEENXM+f4w1yDSlzkagzFGsLy4rXnttd7TnyT7Jubz0z9re2Z30+UVR4wNqbuwNTqwHWrgZYuxpg7XpkdRDkzmKv6KwPsY1gSrmRyY10qj4V12rv9eBHcHZARfcs69RqPzvg1GqAtWtrQEHe99R92CLk2vne3Vecza05qqJiKcAJoK6c3FN/2Vcf2CmgUdyrwDcuV2G82D/ZjhUwhkx1vA/O0sGh/t7YLD9t4pSdul/qP7T9WHMmmVvoX8spCXIcxujV2FMkdd+6lnv8XgA3zu98kjU4BqCzPbdAAosA7rKojTkBLSMZ2RXB7QRg3PlceyXTMize2ayhWbQ03tC4batWu6zT6FiQn+Gv68Se0d//IsjRmB02y5AIFqT3ibmy2DZpDUlepiQjyC/gkO7d9bnw+Z26slL0VSb+JEnGAuin32tLA8D3ko61LLqlLIBr93lq8PG2S4PPqLJM0SPgq/v6BvibcXkMfHPXLxX9nYk/7xRVdMn/kXhe4OJtljm4KVUMKMg+XRYF+FPg4m0One8ssgz3BfCEbtpdF9hfAz+cz4W9a+PIsgZvgH3gHWWAAE+BT1DHa8JPs1I4q+0kau/B2tUAa1cDrF27BOhPup/FFcG9dVyXkwXQ7yffGny8bcle1G/Mz0JId33mvq4MbXfaoSOLA2DTE2MDHJjPb40HtAv3FEvBViVwEeTHCHRD95+jGW7QwW8t2qUkM4kaYO1qgLXrH6KI3Lrkcgs4AAAAAElFTkSuQmCC",
+                        "entry-name": "Service_appointment.png"
+                    },
+                    {
+                        "entry-type": "file",
+                        "file-type": "PNG Image",
+                        "base-64-data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAWFMRmEAu0Pl8QAAAZJJREFUaIHt2uFNwzAQhuH3GIEFChPQEToCG7ACGzBC2SCMwAYNEwAbwASUBbj+uUoFtcklOHau8idZbVSfe09+pJZVUVQ441yUbmDqVGD0VGD0VGD4KCp9A7gFNsAXoDMYG2Dl6t2JKw06NXqRHmBriz0DS89dm3IAV9aLAm3f/H3RyQjyY2+vFf3smpsrgtwAr8BW0cvOuV6gorN6IHn7mlXTU6QCo6cCoycEUJA7QRZjamcPFKQBGuBx1AKOnYMCWmjX8mTfv+XPLsrb12yBXbjwwD5caKAHFxboxYUEDsGFAw7FhQKOwWUDAvfAOjcuJ/DDPm9y4nICl9bgIOR/cdmAY5ApcFmBQ5CpcNmBHmRKXBFgFzI1rhjwGNJGUlxR4BFkctyQvvaTT2bswa+dPrd2uVL0fUi9Y31XX5MBrXZhtcmP/GcBnDL16N5SgdFTgfuMPVmeIvYTBPDdN9cDfLHX9cHCxWI3+sEu33oLHDuG8/4TwgGy5ff2q+RoPTjXVi166lM0eioweiowes4euAPJBGRHqG44TwAAAABJRU5ErkJgggAA",
+                        "entry-name": "Task.png"
+                    }
+                ]
+            }
+        ]
+    }
+]
