@@ -205,9 +205,8 @@ function resetSelectedItemInfo() {
     let sizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-size').querySelector('span');
     sizeEl.innerHTML = "..."
 
-    let colorizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-colorize').querySelector('input');
-    colorizeEl.disabled = false;
-    colorizeEl.checked = false;
+    let colorizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-colorize').querySelector('.colorize-button');
+    colorizeEl.classList.remove('checked');
 }
 
 function fillSelectedItemInfo(file) {
@@ -227,8 +226,12 @@ function fillSelectedItemInfo(file) {
     let sizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-size').querySelector('span');
     sizeEl.innerHTML = formatBytes(file['_data'].uncompressedSize, 2);
 
-    let colorizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-colorize').querySelector('input');
-    colorizeEl.checked = file.colorised;
+    let colorizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-colorize').querySelector('.colorize-button');
+    if (file.colorised) {
+        colorizeEl.classList.add('checked');
+    } else {
+        colorizeEl.classList.remove('checked');
+    }
 
     switch (fileType) {
         case "PNG":
@@ -325,7 +328,7 @@ function rerenderSelectedFilesInfo(files) {
     let sizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-size').querySelector('span');
     sizeEl.innerHTML = formatBytes(size, 2);
 
-    let colorizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-colorize').querySelector('input');
+    let colorizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-colorize').querySelector('.colorize-button');
     colorizeEl.disabled = false;
 }
 
@@ -361,13 +364,98 @@ function rerenderSelectedFolder(state) {
     store.dispatch({ type: "REMOVE_FILE_FROM_SELECTED_FILES", data: [] });
 }
 
-async function updateCurrentFiles(folderName) {
+// async function updateCurrentFiles(folderName) {
+//     let state = store.getState();
+//     let containerEl = document.querySelector('#current-items-section');
+//     let gridViewEl = containerEl.querySelector('.grid-view');
+//     let listViewEl = containerEl.querySelector('.list-view');
+
+//     if (state.currentView == 'grid') {
+//         listViewEl.classList.add('hidden');
+//         gridViewEl.classList.remove('hidden');
+//         let files = [];
+//         [...gridViewEl.children].map(child => {
+//             child.parentNode.removeChild(child);
+//         });
+//         if (!folderName) return;
+//         for (entry in state.data.files) {
+//             if (entry.includes(folderName + "/")) {
+//                 files.push(state.data.files[entry]);
+//             }
+//         }
+//         for (let i = 0; i < files.length; i++) {
+//             let file = files[i];
+//             var textArr = file.name.split('/');
+//             // let base64 = _arrayBufferToBase64(file['_data'].compressedContent); //some files have compressed content, some dont. Leads to bug where some icons dont show up.
+//             // console.log(file);
+//             var promises = [];
+//             if (file['_data'].compressedContent) {
+//                 // createFileGridElement(base64, file.name, gridViewEl);
+//                 let k = file.async('base64').then(base64 => createFileGridElement(base64, file.name, gridViewEl));
+//                 promises.push(k);
+//                 console.log(promises);
+
+//             } else if (textArr[textArr.length - 1] == "") {
+//                 // promises.push(new Promise(() => {
+//                 //     // createGridSplitter(gridViewEl, textArr[textArr.length - 2]);
+//                 //     // console.log('sad');
+//                 // }))
+//             }
+//         }
+//         console.log(promises);
+//         // Promise.all(promises);
+//         if (state.selectedFile) {
+//             var fileEl = document.querySelector(`div[reference-name="${state.selectedFile}"]`);
+//             if (!fileEl) return;
+//             fileEl.classList.add('selected');
+//         } else if (state.selectedFiles) {
+//             rerenderSelectedFiles(state);
+//         }
+//     } else {
+//         gridViewEl.classList.add('hidden');
+//         listViewEl.classList.remove('hidden');
+//         let files = [];
+//         [...listViewEl.children].map(child => {
+//             child.parentNode.removeChild(child);
+//         });
+//         if (!folderName) return;
+//         for (entry in state.data.files) {
+//             if (entry.includes(folderName + "/")) {
+//                 files.push(state.data.files[entry]);
+//             }
+//         }
+//         createSortByBar(listViewEl);
+//         for (let i = 0; i < files.length; i++) {
+//             let file = files[i];
+//             let textArr = file.name.split('/');
+//             let base64 = _arrayBufferToBase64(file['_data'].compressedContent); //some files have compressed content, some dont. Leads to bug where some icons dont show up.
+//             if (file['_data'].compressedContent) {
+//                 createFileListElement(base64, file.name, listViewEl, file.colorised);
+//             } else if (textArr[textArr.length - 1] == "") {
+//                 createListSplitter(listViewEl, textArr[textArr.length - 2]);
+//             }
+//         }
+//         if (state.selectedFile) {
+//             var fileEl = document.querySelector(`li[reference-name="${state.selectedFile}"]`);
+//             if (!fileEl) return;
+//             fileEl.classList.add('selected');
+//         } else if (state.selectedFiles) {
+//             rerenderSelectedFiles(state);
+//         }
+//     }
+// }
+
+async function updateCurrentFiles(folderName, isColorize) {
     let state = store.getState();
     let containerEl = document.querySelector('#current-items-section');
     let gridViewEl = containerEl.querySelector('.grid-view');
     let listViewEl = containerEl.querySelector('.list-view');
 
     if (state.currentView == 'grid') {
+        // if (isColorize) {
+        //     console.log(state);
+        //     return;
+        // }
         listViewEl.classList.add('hidden');
         gridViewEl.classList.remove('hidden');
         let files = [];
@@ -380,27 +468,22 @@ async function updateCurrentFiles(folderName) {
                 files.push(state.data.files[entry]);
             }
         }
-        for (let i = 0; i < files.length; i++) {
-            let file = files[i];
-            var textArr = file.name.split('/');
-            // let base64 = _arrayBufferToBase64(file['_data'].compressedContent); //some files have compressed content, some dont. Leads to bug where some icons dont show up.
-            // console.log(file);
-            var promises = [];
-            if (file['_data'].compressedContent) {
-                // createFileGridElement(base64, file.name, gridViewEl);
-                let k = file.async('base64').then(base64 => createFileGridElement(base64, file.name, gridViewEl));
-                promises.push(k);
-                console.log(promises);
 
-            } else if (textArr[textArr.length - 1] == "") {
-                // promises.push(new Promise(() => {
-                //     // createGridSplitter(gridViewEl, textArr[textArr.length - 2]);
-                //     // console.log('sad');
-                // }))
+        var items = await Promise.all(files.map(async (file) => {
+            return {
+                zipObject: file,
+                base64: await file.async('base64')
+            };
+        }));
+        items.forEach(item => {
+            if (item.base64) {
+                createFileGridElement(item.base64, item.zipObject.name, gridViewEl);
+            } else {
+                textArr = item.zipObject.name.split('/');
+                createGridSplitter(gridViewEl, textArr[textArr.length - 2]);
             }
-        }
-        console.log(promises);
-        // Promise.all(promises);
+        });
+
         if (state.selectedFile) {
             var fileEl = document.querySelector(`div[reference-name="${state.selectedFile}"]`);
             if (!fileEl) return;
@@ -422,16 +505,22 @@ async function updateCurrentFiles(folderName) {
             }
         }
         createSortByBar(listViewEl);
-        for (let i = 0; i < files.length; i++) {
-            let file = files[i];
-            let textArr = file.name.split('/');
-            let base64 = _arrayBufferToBase64(file['_data'].compressedContent); //some files have compressed content, some dont. Leads to bug where some icons dont show up.
-            if (file['_data'].compressedContent) {
-                createFileListElement(base64, file.name, listViewEl, file.colorised);
-            } else if (textArr[textArr.length - 1] == "") {
+
+        var items = await Promise.all(files.map(async (file) => {
+            return {
+                zipObject: file,
+                base64: await file.async('base64')
+            };
+        }));
+        items.forEach(item => {
+            if (item.base64) {
+                createFileListElement(item.base64, item.zipObject.name, listViewEl, item.zipObject.colorised);
+            } else {
+                textArr = item.zipObject.name.split('/');
                 createListSplitter(listViewEl, textArr[textArr.length - 2]);
             }
-        }
+        });
+
         if (state.selectedFile) {
             var fileEl = document.querySelector(`li[reference-name="${state.selectedFile}"]`);
             if (!fileEl) return;
@@ -596,31 +685,26 @@ function renderHierarchyTree(data) {
                 let ulEl = document.createElement('UL');
                 let headerEl = document.createElement('LI');
                 ulEl.classList.add('hierarchy-tree-list');
+                if (i == 0) {
+                    ulEl.classList.add('top-layer-folder');
+                }
                 headerEl.classList.add('ul-header');
                 ulEl.id = `folder-${hierarchyArr[i]}`;
-                if (hierarchyArr[i + 1] != "") {
-                    let collapseIconEl = document.createElement('I');
-                    collapseIconEl.classList.add('material-icons', 'collapse-list-icon');
-                    ulEl.classList.add('collapsed', 'collapsable');
-                    collapseIconEl.innerHTML = "arrow_drop_down";
-                    headerEl.appendChild(collapseIconEl);
-                }
-                if (!entryData.name.includes('.png')) {
-                    let folderIconEl = document.createElement('I');
-                    folderIconEl.classList.add('material-icons', 'folder-icon');
-                    folderIconEl.innerHTML = "folder";
-                    headerEl.appendChild(folderIconEl);
-                }
-
-                let ellipsisIconEl = document.createElement('I');
-                ellipsisIconEl.classList.add('ellipsis-icon');
-
                 let textContainerEl = document.createElement('SPAN');
                 textContainerEl.classList.add('text-container');
                 textContainerEl.innerHTML = hierarchyArr[i];
                 headerEl.appendChild(textContainerEl);
-
-                headerEl.appendChild(ellipsisIconEl);
+                if (hierarchyArr[i + 1] != "") {
+                    let collapseIconEl = document.createElement('I');
+                    collapseIconEl.classList.add('collapse-list-icon');
+                    ulEl.classList.add('collapsed', 'collapsable');
+                    headerEl.appendChild(collapseIconEl);
+                }
+                if (!entryData.name.includes('.png')) {
+                    let folderIconEl = document.createElement('I');
+                    folderIconEl.classList.add('folder-icon');
+                    headerEl.appendChild(folderIconEl);
+                }
                 ulEl.appendChild(headerEl);
                 currentFolder.appendChild(ulEl);
                 currentFolder = ulEl;
@@ -632,10 +716,9 @@ function renderHierarchyTree(data) {
                         let collapseIconTempEl = headerEl.querySelector('.collapse-list-icon');
                         if (headerEl && !collapseIconTempEl) {
                             let collapseIconEl = document.createElement('I');
-                            collapseIconEl.classList.add('material-icons', 'collapse-list-icon');
+                            collapseIconEl.classList.add('collapse-list-icon');
                             headerEl.parentNode.classList.add('collapsed');
                             headerEl.parentNode.classList.add('collapsable');
-                            collapseIconEl.innerHTML = "arrow_drop_down";
                             headerEl.insertBefore(collapseIconEl, headerEl.firstChild);
                         }
                     } catch (err) { }

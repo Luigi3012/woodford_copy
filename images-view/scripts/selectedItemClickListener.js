@@ -21,13 +21,13 @@ function onColorizeCheckboxClick(checkboxEl) {
                 break;
             }
         }
-        updateCurrentFiles(selectedFolder.name);
+        updateCurrentFiles(selectedFolder.name, true);
     } else if (selectedFiles) {
         for (file in data.files) {
             if (selectedFiles.includes(file)) {
                 data.files[file].colorised = checkboxEl.checked;
             }
         }
-        updateCurrentFiles(selectedFolder.name);
+        updateCurrentFiles(selectedFolder.name, true);
     }
 }   

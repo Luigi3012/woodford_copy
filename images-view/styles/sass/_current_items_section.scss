@@ -7,7 +7,7 @@
         margin: 50px 0 -10px 0;
         padding: 0 0 0 18px;
         color: rgb(56, 56, 56);
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         user-select: none;
 
@@ -43,12 +43,16 @@
 
     &>.grid-view {
         width: 100%;
-        height: calc(100% - 45px);
+        height: 100%;
         display: flex;
         flex-direction: row;
         align-content: flex-start;
         flex-wrap: wrap;
         overflow-y: auto;
+        background-color: #D5D5D5;
+        padding-top: 40px;
+        box-sizing: border-box;
+        margin-bottom: 200px !important;
 
         &.hidden {
             display: none;
@@ -59,9 +63,9 @@
         width: 100%;
         height: calc(100% - 45px);
         margin: 0;
-        padding: 1.2em 1em;
+        padding: 2em 1em;
         overflow-y: auto;
-        // background-color: rgba(255, 0, 0, 0.404);
+        background-color: #D5D5D5;
 
         &.hidden {
             display: none;
@@ -133,54 +137,47 @@
 
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
+    align-content: space-between;
     flex-wrap: wrap;
     // overflow-y: auto;
 
-    &>.toolbar {
-        width: 100%;
-        height: 45px;
-        box-shadow: -3px 5px 8px -5px silver;
-        color: #424242;
-        padding: 0 12px;
+    & .select-all-icon {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-image: url('../../src/select-all-icon.svg');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 8px;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        user-select: none;
+        &.selected {
+            background-image: url('../../src/select-all-icon-selected.svg') !important;
+        }
+    }
 
-        &>.select-all-icon {
-            display: block;
-            width: 24px !important;
+    & .change-view-icon {
+        // margin-left: auto;
+        width: 27px;
+        height: 27px;
+        background-size: 53%;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &[current-view="grid"] {
+            background-image: url('../../src/grid.svg');
         }
 
-        &>.dropdown-menu-icon {
-            // width: 20px;
-            margin-left: -4px;
+        &[current-view="list"] {
+            background-image: url('../../src/list.svg');
         }
+    }
 
-        &>.change-view-icon {
-            margin-left: auto;
-            width: 27px;
-            height: 27px;
-            background-size: 85%;
-            background-position: center;
-            background-repeat: no-repeat;
-            cursor: pointer;
-
-            &[current-view="grid"] {
-                background-image: url('../../src/grid.svg');
-            }
-
-            &[current-view="list"] {
-                background-image: url('../../src/list.svg');
-            }
-        }
-
-        &>.material-icons {
-            cursor: pointer;
-        }
+    & .material-icons {
+        cursor: pointer;
     }
 }
 
@@ -188,7 +185,7 @@
     list-style: none;
     margin: 0 0 0 40px;
     position: sticky;
-    top: -1.2em;
+    top: 8px;
     height: 30px;
     padding: 0 .6em;
 
@@ -201,6 +198,7 @@
     display: flex;
 
     align-items: center;
+    display: none;
     // justify-content: space-between;
 
     &>.sort-name {
@@ -224,9 +222,10 @@
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    background-color: rgb(223, 223, 223);
+    background-color: #EEEEEE;
     color: #8a8a8a;
-    border-radius: 10%;
+    border: 1px solid #B4B4B4;
+    // border-radius: 2px;
     background-size: 80%;
     background-position: center center;
     overflow: visible;

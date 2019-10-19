@@ -29,7 +29,7 @@ function onFolderClick(folderEl) {
             }
         });
     } else { //close Folder
-        if (folderEl.children[0].classList.contains('collapse-list-icon')) {
+        if (folderEl.children[1].classList.contains('collapse-list-icon')) {
             folderEl.parentNode.classList.add('collapsed');
             store.dispatch({
                 type: "SET_SELECTED_FOLDER", data: {

@@ -77,6 +77,7 @@ function resetApp() {
     document.querySelector('.main-content').querySelector('iframe').src = ""
 }
 
+
 // function updatePage() {
 //     let selectedItem = document.getElementsByClassName('list-item selected')[0];
 //     if (!selectedItem) {

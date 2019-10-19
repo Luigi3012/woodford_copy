@@ -51,7 +51,7 @@ function colorizeFile(iconEl) {
 }
 
 function selectAllFiles(target) {
-    if (target.innerHTML == 'check_box_outline_blank') {
+    if (target.classList.contains('select-all-icon')) {
         if (store.getState().currentView == "grid") {
             var files = document.getElementsByClassName('current-items-grid-item');
         } else {
@@ -65,17 +65,17 @@ function selectAllFiles(target) {
             references.push(fileReference);
         }
         store.dispatch({ type: 'REMOVE_FILE_FROM_SELECTED_FILES', data: references });
-        target.innerHTML = 'check_box_outline_selected';
+        target.classList.add('selected');
     } else {
         store.dispatch({ type: 'REMOVE_FILE_FROM_SELECTED_FILES', data: [] });
-        target.innerHTML = 'check_box_outline_blank';
+        target.classList.remove('selected');
     }
 
 }
 
 function resetSelectAllButton() {
     let target = document.querySelector('.select-all-icon');
-    target.innerHTML = 'check_box_outline_blank';
+    target.classList.remove('selected');
 }
 
 function changeView(changeViewIcon) {

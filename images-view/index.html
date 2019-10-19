@@ -6,18 +6,19 @@
 </head>
 
 <body>
-    <section id="hierarchy-tree-section"></section>
+    <section id="hierarchy-tree-section">
+        <header class="section-header">Locations</header>
+    </section>
     <section id="current-items-section">
+        <header class="section-header">Files
+            <i class="select-all-icon"></i>
+            <i class="change-view-icon" current-view="grid"></i></header>
         <div class="placeholder">Select folder to see files inside it...</div>
-        <div class="toolbar">
-            <i class="material-icons select-all-icon">check_box_outline_blank</i>
-            <i class="material-icons dropdown-menu-icon">arrow_drop_down</i>
-            <i class="change-view-icon" current-view="grid"></i>
-        </div>
         <div class="grid-view"></div>
         <ul class="list-view hidden"></ul>
     </section>
     <section id="selected-item-info-section">
+        <header class="section-header">Preview</header>
         <div class="selected-item-name">Title...</div>
         <div class="image-placeholder">
             <p class="file-type-placeholder"></p>
@@ -26,9 +27,14 @@
             </i>
         </div>
         <section class="selected-item-info">
-            <p class="selected-item-type">Type: <span>...</span></p>
-            <p class="selected-item-size">Size: <span>...</span></p>
-            <p class="selected-item-colorize">Colorize:&nbsp;<input type="checkbox" class="checkbox" disabled></p>
+            <p class="selected-item-type">Type:&nbsp<span>...</span></p>
+            <p class="selected-item-size">Size:&nbsp<span>...</span></p>
+            <div class="selected-item-colorize">
+                Colorize:
+                <div class="colorize-button checkbox">
+                    <div class="state"></div>
+                </div>
+            </div>
         </section>
     </section>
 

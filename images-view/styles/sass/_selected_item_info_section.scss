@@ -1,17 +1,18 @@
 #selected-item-info-section {
-    padding: 30% 15%;
+    padding: 95px 20px;
+    background-color: #EEEEEE;
     overflow: hidden;
+    position: relative;
+    max-width: 220px !important;
 
     &>.image-placeholder {
         position: relative;
         width: 100%;
-        background-color: rgb(228, 228, 228);
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 20px;
-        box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.267);
-
+        background-color: #F1F3F4;
+        border: 1px solid #B4B4B4;
         background-repeat: no-repeat;
         background-size: 75%;
         background-position: center center;
@@ -39,8 +40,8 @@
         margin: 0 0 .8em 3px;
         padding: 0;
         font-weight: 400;
-        color: rgb(138, 138, 138);
-        font-size: 1.1em;
+        color: #707070;
+        font-size: 16px;
         width: 100%;
         max-width: calc(100% + 0px);
         overflow: hidden;
@@ -51,12 +52,13 @@
     &>.selected-item-info {
         width: 100%;
         height: 100%;
+        color: #707070;
 
         &>p {
             margin: .5em 0 0 3px;
             padding: 0;
-            color: rgb(138, 138, 138);
-            display: inline-block;
+            display: flex;
+            flex-direction: row;
             width: 100%;
             font-size: 1em;
 
@@ -64,15 +66,56 @@
                 margin-top: 1.2em;
             }
 
-            &>.checkbox {
-                margin: 0;
-                align-self: center;
-                vertical-align: middle;
-            }
+            // &>.checkbox {
+            //     margin: 0;
+            //     align-self: center;
+            //     vertical-align: middle;
+            // }
 
             &>span {
                 font-size: .9em;
             }
         }
+    }
+}
+
+.selected-item-colorize {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+    margin-left: 3px;
+}
+
+.colorize-button {
+    width: 38px;
+    height: 18px;
+    border-radius: 11px;
+    background-color: #707070;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 2px;
+
+    transition: background-color .2s ease;
+
+    &>.state {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: white;
+        margin-right: 2px;
+        transition: margin .2s ease;
+        pointer-events: none;
+    }
+
+    &.checked {
+        &>.state {
+            margin-right: 22px;
+        }
+
+        background-color: #0063CE;
     }
 }

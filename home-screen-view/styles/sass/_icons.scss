@@ -1,32 +1,22 @@
-.icon-drag-14 {
-    width: 14px;
-    height: 14px;
+.icon-drag {
+    width: 24px;
+    height: 24px;
     display: inline-block;
     background-image: url('../../src/icon-grip.png');
     background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: center center;
-    margin-right: 9px;
-    cursor: pointer;
-}
-
-.icon-drag-18 {
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    background-image: url('../../src/icon-grip.png');
-    background-repeat: no-repeat;
-    background-size: 18px 18px;
+    background-size: 80%;
     background-position: center center;
     margin-right: 9px;
     cursor: pointer;
 }
 
 .entity-icon {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: #CCCCCC;
+    width: 28px;
+    height: 28px;
     display: inline-block;
     margin-right: 9px;
+    background-size: 95% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
