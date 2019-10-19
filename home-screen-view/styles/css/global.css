@@ -925,8 +925,6 @@ input[type=number] {
   max-height: 300px;
   -webkit-transition: max-height .2s ease;
   transition: max-height .2s ease;
-  -webkit-transition: height .2s ease;
-  transition: height .2s ease;
 }
 
 .banner-list.collapsed {
@@ -1462,11 +1460,12 @@ input[type=number] {
   opacity: .2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20);
+  font-size: 0px;
 }
 
 .gu-transit .banner-header {
   position: absolute;
-  font-size: 24px;
+  font-size: 24px !important;
   color: #000000;
   font-weight: 500;
   white-space: nowrap;

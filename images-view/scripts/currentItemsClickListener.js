@@ -51,7 +51,7 @@ function colorizeFile(iconEl) {
 }
 
 function selectAllFiles(target) {
-    if (target.classList.contains('select-all-icon')) {
+    if (target.classList.contains('select-all-icon') && !target.classList.contains('selected')) {
         if (store.getState().currentView == "grid") {
             var files = document.getElementsByClassName('current-items-grid-item');
         } else {

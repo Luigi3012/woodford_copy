@@ -14,10 +14,15 @@ function setSelectedItemClickListener() {
 
 function onColorizeCheckboxClick(checkboxEl) {
     let { selectedFile, selectedFiles, selectedFolder, data } = store.getState();
+    if (checkboxEl.classList.contains('checked')) {
+        checkboxEl.classList.remove('checked');
+    } else {
+        checkboxEl.classList.add('checked');
+    }
     if (selectedFile) {
         for (file in data.files) {
             if (file == selectedFile) {
-                data.files[file].colorised = checkboxEl.checked;
+                data.files[file].colorised = checkboxEl.classList.contains('checked');
                 break;
             }
         }
@@ -25,7 +30,7 @@ function onColorizeCheckboxClick(checkboxEl) {
     } else if (selectedFiles) {
         for (file in data.files) {
             if (selectedFiles.includes(file)) {
-                data.files[file].colorised = checkboxEl.checked;
+                data.files[file].colorised = checkboxEl.classList.contains('checked');
             }
         }
         updateCurrentFiles(selectedFolder.name, true);

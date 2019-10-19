@@ -99,6 +99,16 @@
         border-bottom: 1px solid #D9DFE2;
         box-sizing: border-box;
 
+        &#selected {
+            & .folder-icon {
+                background-image: url('../../src/folder-icon-selected.svg') !important;
+            }
+
+            & .text-container {
+                color: black;
+            }
+        }
+
         &>.folder-icon {
             display: block;
             position: absolute;

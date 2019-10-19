@@ -109,6 +109,14 @@
           box-sizing: border-box;
 }
 
+.hierarchy-tree-list > .ul-header#selected .folder-icon {
+  background-image: url("../../src/folder-icon-selected.svg") !important;
+}
+
+.hierarchy-tree-list > .ul-header#selected .text-container {
+  color: black;
+}
+
 .hierarchy-tree-list > .ul-header > .folder-icon {
   display: block;
   position: absolute;
@@ -606,9 +614,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   cursor: pointer;
   margin-left: 10px;
   margin-top: 2px;
@@ -621,7 +629,7 @@
   height: 14px;
   border-radius: 50%;
   background-color: white;
-  margin-right: 2px;
+  margin-left: 2px;
   -webkit-transition: margin .2s ease;
   transition: margin .2s ease;
   pointer-events: none;
@@ -632,7 +640,7 @@
 }
 
 .colorize-button.checked > .state {
-  margin-right: 22px;
+  margin-left: 22px;
 }
 
 html,

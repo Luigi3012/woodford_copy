@@ -4,11 +4,7 @@ let initialState = {
     selectedFiles: [],
     data: null,
     cachedState: null,
-    currentView: 'grid',
-    shiftRange: {
-        start: null,
-        end: null
-    }
+    currentView: 'grid'
 }
 
 lastDispatchIsCache = false;
@@ -452,10 +448,9 @@ async function updateCurrentFiles(folderName, isColorize) {
     let listViewEl = containerEl.querySelector('.list-view');
 
     if (state.currentView == 'grid') {
-        // if (isColorize) {
-        //     console.log(state);
-        //     return;
-        // }
+        if (isColorize) {
+            return;
+        }
         listViewEl.classList.add('hidden');
         gridViewEl.classList.remove('hidden');
         let files = [];

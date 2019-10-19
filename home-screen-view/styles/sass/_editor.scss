@@ -268,7 +268,6 @@
     position: relative;
     max-height: 300px;
     transition: max-height .2s ease;
-    transition: height .2s ease;
 
     &.collapsed {
         max-height: 0px;
@@ -480,8 +479,6 @@
         }
 
         &.selected {
-
-
             & .select-div {
                 outline: 2px dashed #0063CE;
                 outline-offset: -2px;
