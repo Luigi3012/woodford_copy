@@ -489,8 +489,14 @@ async function updateCurrentFiles(folderName, isColorize) {
     } else {
         if (isColorize) {
             let { files } = state.data;
+            let fileEl = null;
+            let checkboxEl = null;
             for (file in files) {
-
+                fileEl = document.querySelector(`li[reference-name="${files[file].name}"]`);
+                if (fileEl) {
+                    checkboxEl = fileEl.querySelector('.colorize-file-icon');
+                    checkboxEl.innerHTML = (files[file].colorised) ? 'check_box' : 'check_box_outline_blank';
+                }
             }
             return;
         }
