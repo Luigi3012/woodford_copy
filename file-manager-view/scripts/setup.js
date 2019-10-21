@@ -62,14 +62,14 @@ window.addEventListener('DOMContentLoaded', () => {
                     ...state,
                     currentView: action.data
                 }
-            case "CHANGE_COLORIZE_OF_FILE":
-            // return {
-            //     ...state,
-            //     selectedFile: {
-            //         ...state.selectedFile,
-            //         colorized: action.data
-            //     }
-            // }
+            // case "CHANGE_COLORIZE_OF_FILE":
+            // // return {
+            // //     ...state,
+            // //     selectedFile: {
+            // //         ...state.selectedFile,
+            // //         colorized: action.data
+            // //     }
+            // // }
             default:
                 return {
                     ...state
@@ -487,6 +487,13 @@ async function updateCurrentFiles(folderName, isColorize) {
             rerenderSelectedFiles(state);
         }
     } else {
+        if (isColorize) {
+            let { files } = state.data;
+            for (file in files) {
+
+            }
+            return;
+        }
         gridViewEl.classList.add('hidden');
         listViewEl.classList.remove('hidden');
         let files = [];

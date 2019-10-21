@@ -923,8 +923,8 @@ input[type=number] {
   height: 140px;
   position: relative;
   max-height: 300px;
-  -webkit-transition: max-height .2s ease;
-  transition: max-height .2s ease;
+  -webkit-transition: max-height .2s ease, height .2s ease;
+  transition: max-height .2s ease, height .2s ease;
 }
 
 .banner-list.collapsed {

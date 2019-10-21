@@ -267,7 +267,7 @@
     height: 140px;
     position: relative;
     max-height: 300px;
-    transition: max-height .2s ease;
+    transition: max-height .2s ease, height .2s ease;
 
     &.collapsed {
         max-height: 0px;

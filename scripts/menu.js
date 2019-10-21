@@ -41,6 +41,7 @@ function onMenuItemClick(event) {
     if (state.currentView == target.getAttribute('selector')) {
         store.dispatch({ type: 'CHANGE_CURRENT_VIEW', data: null });
     } else {
+        console.log(target.getAttribute('selector'));
         store.dispatch({ type: 'CHANGE_CURRENT_VIEW', data: target.getAttribute('selector') });
     }
 }
@@ -58,7 +59,8 @@ function updateApp(state) {
         toSelectItem.classList.add('selected');
         let toolbarAddon = document.querySelector(`.${currentView}-toolbar-addon`);
         toolbarAddon.classList.remove('hidden');
-        document.querySelector('.main-content').querySelector('iframe').src = `${currentView}-view`;
+        console.log(currentView);
+        document.querySelector('.main-content').querySelector('iframe').src = `${currentView}-view/index.html`;
     }
 }
 

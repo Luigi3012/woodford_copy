@@ -33,6 +33,8 @@ function onColorizeCheckboxClick(checkboxEl) {
                 data.files[file].colorised = checkboxEl.classList.contains('checked');
             }
         }
-        updateCurrentFiles(selectedFolder.name, true);
+        if (selectedFolder) {
+            updateCurrentFiles(selectedFolder.name, true);
+        }
     }
 }   

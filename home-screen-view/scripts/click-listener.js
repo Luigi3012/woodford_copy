@@ -329,7 +329,7 @@ function changeBannerHeight(value) {
     let bannerList = document.querySelector('.banner-list');
     bannerList.style.height = value;
     [...bannerEls].map(item => {
-        item.style.height = value;
+        item.style.height = Math.ceil(value);
     });
 }
 
@@ -345,7 +345,7 @@ function changeEntitiesIconHeight(value) {
     [...listItems].map(item => {
         let icon = item.querySelector('.entity-icon');
         if (!icon) return;
-        icon.style.height = value + "px";
+        icon.style.height = Math.ceil(value) + "px";
     });
 }
 
@@ -354,7 +354,7 @@ function changeEntitiesIconWidth(value) {
     [...listItems].map(item => {
         let icon = item.querySelector('.entity-icon');
         if (!icon) return;
-        icon.style.width = value + "px";
+        icon.style.width = Math.ceil(value) + "px";
     });
 }
 
@@ -363,7 +363,7 @@ function changeEntitiesRowHeight(value) {
     let listItems = document.querySelectorAll('.draggable-list-item');
     [...listItems].map(item => {
         if (!item.classList.contains('editor-banner')) {
-            item.style.height = value;
+            item.style.height = Math.ceil(value);
         }
     })
 }
@@ -371,7 +371,7 @@ function changeEntitiesRowHeight(value) {
 function changeEntitiesFontSize(value) {
     let listItems = document.querySelectorAll('.draggable-list-item');
     [...listItems].map(item => {
-        item.style.fontSize = value;
+        item.style.fontSize = Math.ceil(value);
     })
 }
 
