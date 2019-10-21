@@ -1,0 +1,122 @@
+[
+    {
+        "reference_name": "reference_color_list_background",
+        "color": "#f0f0f0"
+    },
+    {
+        "reference_name": "reference_color_list_selected_background",
+        "color": "#d9ecff"
+    },
+    {
+        "reference_name": "reference_color_list_foreground",
+        "color": "#707070"
+    },
+    {
+        "reference_name": "reference_color_list_selected_foreground",
+        "color": "#0066cc"
+    },
+    {
+        "reference_name": "reference_color_list_separator",
+        "color": "#d3d3d3"
+    },
+    {
+        "reference_name": "reference_color_title_background",
+        "color": "#4598ff"
+    },
+    {
+        "reference_name": "reference_color_title_foreground",
+        "color": "#fdfdfd"
+    },
+    {
+        "reference_name": "reference_color_list_header_foreground",
+        "color": "#ffffff"
+    },
+    {
+        "reference_name": "reference_color_list_header_background",
+        "color": "#0066cc"
+    },
+    {
+        "reference_name": "reference_color_search_background",
+        "color": "#ffffff"
+    },
+    {
+        "reference_name": "reference_color_search_foreground",
+        "color": "#b4b4b4"
+    },
+    {
+        "reference_name": "reference_color_search_selected_foreground",
+        "color": "#0066cc"
+    },
+    {
+        "reference_name": "reference_color_tab_background",
+        "color": "#dedede"
+    },
+    {
+        "reference_name": "reference_color_tab_foreground",
+        "color": "#c8c7cc"
+    },
+    {
+        "reference_name": "reference_color_tab_selected_foreground",
+        "color": "#707070"
+    },
+    {
+        "reference_name": "reference_color_form_background",
+        "color": "#f0f0f0"
+    },
+    {
+        "reference_name": "reference_color_form_item_background",
+        "color": "#ffffff"
+    },
+    {
+        "reference_name": "reference_color_form_item_foreground",
+        "color": "#88888b"
+    },
+    {
+        "reference_name": "reference_color_form_item_label_foreground",
+        "color": "#0066cc"
+    },
+    {
+        "reference_name": "reference_color_form_item_disabled",
+        "color": "#e4e4e4"
+    },
+    {
+        "reference_name": "reference_color_form_item_link",
+        "color": "#4598ff"
+    },
+    {
+        "reference_name": "reference_color_form_item_separator",
+        "color": "#dedede"
+    },
+    {
+        "reference_name": "reference_color_form_item_button",
+        "color": "#0066cc"
+    },
+    {
+        "reference_name": "reference_color_grid_background",
+        "color": "#ffffff"
+    },
+    {
+        "reference_name": "reference_color_grid_border",
+        "color": "#ffffff"
+    },
+    {
+        "reference_name": "reference_color_home_list_background",
+        "color": "#f0f0f0"
+    },
+    {
+        "reference_name": "reference_color_home_list_selected_background",
+        "color": "#d9ecff"
+    },
+    {
+        "reference_name": "reference_color_home_list_foreground",
+        "color": "#707070"
+    },
+    {
+        "reference_name": "reference_color_home_list_selected_foreground",
+        "color": "#0066cc"
+    },
+    {
+        "reference_name": "reference_color_home_list_separator",
+        "color": "#d3d3d3"
+    }    
+]

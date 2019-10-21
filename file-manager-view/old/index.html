@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/global.css">
+</head>
+
+<body>
+    <section id="hierarchy-tree-section"></section>
+    <section id="current-items-section">
+        <div class="placeholder">Select folder to see files inside it...</div>
+    </section>
+    <section id="selected-item-info-section">
+        <h1 class="selected-item-name">Title...</h1>
+        <div class="image-placeholder">
+            <i class="material-icons image-placeholder-icon">
+                photo_size_select_actual
+            </i>
+        </div>
+        <section class="selected-item-info">
+            <p class="selected-item-type">Type: <span>...</span></p>
+            <p class="selected-item-size">Size: <span>...</span></p>
+            <p class="selected-item-colorize">Colorize:&nbsp;<input type="checkbox" class="checkbox" disabled></p>
+        </section>
+    </section>
+
+    <!-- cdns -->
+    <script src="https://unpkg.com/redux@4.0.1/dist/redux.js"></script>
+    <script src="scripts/jszip_api.js"></script>
+    <script src="scripts/jszip_utils_api.js"></script>
+
+    <!-- dependent scripts -->
+    <script src="scripts/setup.js"></script>
+    <script src="scripts/collapse-list.js"></script>
+    <script src="scripts/on_folder_click.js"></script>
+    <script src="scripts/on_file_click.js"></script>
+</body>
+
+</html>

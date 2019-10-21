@@ -1,0 +1,22 @@
+.icon-drag {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url('../../src/icon-grip.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.entity-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    margin-right: 9px;
+    background-size: 95% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}

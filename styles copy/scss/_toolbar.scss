@@ -1,0 +1,146 @@
+.toolbar {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#f1f1f1, #eee);
+    border-bottom: 1px solid hsla(0, 0%, 41.6%, .18);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+
+    &>section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    & .panel {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        border-right: 1px solid #d6d6d6;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: row;
+
+        &>.horizontal-buttons-container {
+            &>.horizontal-button {
+                margin: 2px;
+            }
+        }
+
+        & .disabled {
+            color: #C6C6C6;
+            cursor: default !important;
+            pointer-events: none;
+
+            & .icon-commonui {
+                opacity: .4;
+            }
+
+            &:hover {
+                background-color: none;
+                border: none;
+            }
+        }
+
+        & .vertical-button {
+            display: block;
+            width: 60px;
+            min-width: 60px;
+            height: 78px;
+            margin-top: 4px;
+            margin-left: 2px;
+            margin-right: 2px;
+            box-sizing: border-box;
+            overflow: hidden;
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & .button-label {
+                text-align: center;
+                width: calc(80%);
+                min-width: calc(80%);
+                overflow: hidden;
+            }
+
+            & .icon-commonui {
+                margin-top: 7px;
+            }
+
+            &:hover {
+                background-color: #ffe8a2;
+                border: 1px solid #FFC280;
+
+                & .icon-commonui {
+                    margin-top: 6px;
+                }
+            }
+        }
+
+        & .horizontal-button {
+            display: block;
+            width: 110px;
+            min-width: 110px;
+            height: 26px;
+            box-sizing: border-box;
+            overflow: hidden;
+            cursor: pointer;
+            padding: 0 10px;
+            margin: 5px 5px 0 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &>.icon-commonui {
+                margin-right: 7px;
+            }
+
+            & .button-label {
+                text-align: left;
+                width: calc(70%);
+                min-width: calc(70%);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            &:hover {
+                background-color: #ffe8a2;
+                border: 1px solid #FFC280;
+
+                & .icon-commonui {
+                    margin-left: -1px;
+                }
+            }
+        }
+
+        &>.label {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            width: 100%;
+            min-width: 100%;
+            color: #6a6a6a;
+            text-align: center;
+            font-size: 10px;
+            background-color: #e6e6e6;
+        }
+    }
+}
+
+.toolbar-addon {
+    &.hidden {
+        display: none;
+    }
+}

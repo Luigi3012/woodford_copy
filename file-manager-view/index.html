@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/global.css">
+</head>
+
+<body>
+    <section id="hierarchy-tree-section">
+        <header class="section-header">Locations</header>
+    </section>
+    <section id="current-items-section">
+        <header class="section-header">Files
+            <i class="select-all-icon"></i>
+            <i class="change-view-icon" current-view="grid"></i></header>
+        <div class="placeholder">Select folder to see files inside it...</div>
+        <div class="grid-view"></div>
+        <ul class="list-view hidden"></ul>
+    </section>
+    <section id="selected-item-info-section">
+        <header class="section-header">Preview</header>
+        <div class="selected-item-name">Title...</div>
+        <div class="image-placeholder">
+            <p class="file-type-placeholder"></p>
+            <i class="material-icons image-placeholder-icon">
+                photo_size_select_actual
+            </i>
+        </div>
+        <section class="selected-item-info">
+            <p class="selected-item-type">Type:&nbsp<span>...</span></p>
+            <p class="selected-item-size">Size:&nbsp<span>...</span></p>
+            <div class="selected-item-colorize">
+                Colorize:
+                <div class="colorize-button checkbox">
+                    <div class="state"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- cdns -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/3.2.5/tinysort.min.js"></script>
+    <script src="https://unpkg.com/redux@4.0.1/dist/redux.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="scripts/jszip_api.js"></script>
+    <script src="scripts/jszip_utils_api.js"></script>
+
+    <!-- dependent scripts -->
+    <script src="scripts/hierarchyTreeClickListener.js"></script>;
+    <script src="scripts/currentItemsClickListener.js"></script>;
+    <script src="scripts/selectedItemClickListener.js"></script>;
+    <script src="scripts/setup.js"></script>
+</body>
+
+</html>

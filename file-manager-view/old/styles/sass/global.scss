@@ -1,0 +1,45 @@
+@import '_hierarchy_tree_section', '_current_items_section', 'selected_item_info_section';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+    grid-template-rows: 100%;
+    grid-template-areas: "hierarchy-tree-section current-items-section selected-item-info-section"
+}
+
+#current-items-section {
+    grid-area: current-items-section;
+    border-right: 1px solid #DEDEDE;
+}
+
+#selected-item-info-section {
+    grid-area: selected-item-info-section;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
