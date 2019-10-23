@@ -205,7 +205,7 @@ function resetSelectedItemInfo() {
     colorizeEl.classList.remove('checked');
 }
 
-function fillSelectedItemInfo(file) {
+async function fillSelectedItemInfo(file) {
     let { name } = file;
     let fileType = name.slice(name.lastIndexOf('.') + 1, name.length).toUpperCase();
 
@@ -232,7 +232,8 @@ function fillSelectedItemInfo(file) {
     switch (fileType) {
         case "PNG":
             titleEl.innerHTML = name.slice(file.name.lastIndexOf('/') + 1, file.name.lastIndexOf('@'));
-            let imgData = _arrayBufferToBase64(file['_data'].compressedContent);
+            let imgData = await file.async('base64');
+            // let imgData = _arrayBufferToBase64(file['_data'].compressedContent);
             imgEl.style.backgroundImage = "url('data:image/png;base64," + imgData + "')";
             colorizeEl.disabled = false;
             break;
@@ -295,7 +296,7 @@ function rerenderSelectedFiles(state) {
     resetSelectAllButton();
 }
 
-function rerenderSelectedFilesInfo(files) {
+async function rerenderSelectedFilesInfo(files) {
     let state = store.getState();
     let titleEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-name');
     if (files.length > 1) {
@@ -306,20 +307,30 @@ function rerenderSelectedFilesInfo(files) {
 
     let size = 0;
     let filesData = "";
-    for (let i = 0; i < files.length; i++) {
-        let file = files[i];
+    [...files].map(async (file, i) => {
         size += state.data.files[file]['_data'].uncompressedSize;
-        let imgData = _arrayBufferToBase64((state.data.files[file]['_data'].compressedContent));
+        let imgData = await state.data.files[file].async('base64');
+        // let imgData = _arrayBufferToBase64((state.data.files[file]['_data'].compressedContent));
         filesData += "url('data:image/png;base64," + imgData + "'), "
         if (files.length == i + 1) {
             filesData += "url('data:image/png;base64," + imgData + "')"
         }
-    }
-
-    let imgEl = document.querySelector('#selected-item-info-section').querySelector('.image-placeholder');
-    let imgPlaceholderEl = imgEl.querySelector('.image-placeholder-icon');
-    imgPlaceholderEl.style.display = 'none';
-    imgEl.style.backgroundImage = filesData;
+    });
+    setTimeout(() => {
+        let imgEl = document.querySelector('#selected-item-info-section').querySelector('.image-placeholder');
+        let imgPlaceholderEl = imgEl.querySelector('.image-placeholder-icon');
+        imgPlaceholderEl.style.display = 'none';
+        imgEl.style.backgroundImage = filesData;
+    }, 100);
+    // for (let i = 0; i < files.length; i++) {
+    //     let file = files[i];
+    //     size += state.data.files[file]['_data'].uncompressedSize;
+    // let imgData = _arrayBufferToBase64((state.data.files[file]['_data'].compressedContent));
+    //     filesData += "url('data:image/png;base64," + imgData + "'), "
+    //     if (files.length == i + 1) {
+    //         filesData += "url('data:image/png;base64," + imgData + "')"
+    //     }
+    // }
 
     let sizeEl = document.querySelector('#selected-item-info-section').querySelector('.selected-item-size').querySelector('span');
     sizeEl.innerHTML = formatBytes(size, 2);
