@@ -44,9 +44,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   cursor: pointer;
   -webkit-transition: background-color .2s ease;
   transition: background-color .2s ease;
@@ -57,7 +57,7 @@
   height: 14px;
   border-radius: 50%;
   background-color: white;
-  margin-right: 2px;
+  margin-left: 2px;
   -webkit-transition: margin .2s ease;
   transition: margin .2s ease;
   pointer-events: none;
@@ -68,7 +68,7 @@
 }
 
 .colorize-settings > .colorize-button.selected > .state {
-  margin-right: 22px;
+  margin-left: 22px;
 }
 
 .images-container {
